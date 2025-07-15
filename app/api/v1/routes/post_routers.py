@@ -40,6 +40,6 @@ def like(post_id: int, db: Session = Depends(get_db), current_user=Depends(get_c
     return like_post(post_id, db, current_user.id)
 
 
-@router.post("/unlike/{post_id}")
+@router.delete("/unlike/{post_id}")
 def unlike(post_id: int, db: Session = Depends(get_db), current_user=Depends(get_current_user)):
     return unlike_post(post_id, db, current_user.id)
