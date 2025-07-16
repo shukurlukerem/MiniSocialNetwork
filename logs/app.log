@@ -1,0 +1,2 @@
+[2025-07-16 08:16:58] [INFO] - fastapi_app_logger - Incoming request: POST http://127.0.0.1:8000/auth/login
+[2025-07-16 08:16:59] [INFO] - fastapi_app_logger - Response status: 200

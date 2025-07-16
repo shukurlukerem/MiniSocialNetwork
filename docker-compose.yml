@@ -1,12 +1,8 @@
-version: '3.9'
-
 services:
   web:
     build:
       context: ./app
-    container_name: mydb
-    env_file:
-      - .env
+    container_name: myweb
     volumes:
       - ./app:/app
     ports:
