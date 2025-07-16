@@ -1,14 +1,12 @@
 from fastapi import FastAPI
-from api.v1.routes import auth_routes
-from api.v1.routes import user_routes
+from app.api.v1.routes import auth_routes
+from app.api.v1.routes import user_routes
 from app.core.config import Base, engine
 from fastapi_cache import FastAPICache
-#from fastapi_cache.backends.redis import RedisBackend
-import aioredis
-from core.rate_limiter import init_rate_limiter
-from api.v1.routes import post_routers 
+from app.core.rate_limiter import init_rate_limiter
+from app.api.v1.routes import post_routers 
 from fastapi import FastAPI, Request
-from core.log import logger
+from app.core.log import logger
 
 Base.metadata.create_all(bind=engine)
 app = FastAPI(
